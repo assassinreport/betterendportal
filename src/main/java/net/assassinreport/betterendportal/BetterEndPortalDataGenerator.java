@@ -6,7 +6,6 @@ import net.assassinreport.betterendportal.datagen.ModModelProvider;
 import net.assassinreport.betterendportal.datagen.ModWorldGenerator;
 import net.assassinreport.betterendportal.world.ModConfiguredFeatures;
 import net.assassinreport.betterendportal.world.ModPlacedFeatures;
-import net.assassinreport.betterendportal.world.dimension.ModDimensions;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -27,7 +26,5 @@ public class BetterEndPortalDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
-		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
-
 	}
 }
