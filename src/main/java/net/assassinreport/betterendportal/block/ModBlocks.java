@@ -2,8 +2,6 @@ package net.assassinreport.betterendportal.block;
 
 import net.assassinreport.betterendportal.BetterEndPortal;
 import net.assassinreport.betterendportal.block.custom.NewEndPortalBlock;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -18,8 +16,7 @@ public class ModBlocks {
             new NewEndPortalBlock());
 
     public static final Block VOID_MATTER = registerBlock("void_matter",
-            new Block(FabricBlockSettings
-                    .copyOf(Blocks.OBSIDIAN)));
+            new Block(Block.Settings.copy(Blocks.OBSIDIAN)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -28,7 +25,7 @@ public class ModBlocks {
 
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(BetterEndPortal.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
+                new BlockItem(block, new Item.Settings()));
     }
 
     public static void registerModBlocks() {
