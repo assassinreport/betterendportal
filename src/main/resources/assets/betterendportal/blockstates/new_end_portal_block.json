@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "betterendportal:block/new_end_portal_block" }
+  }
+}
