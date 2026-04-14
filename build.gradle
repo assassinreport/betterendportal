@@ -31,7 +31,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.20.2-3.0.0.170'
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.20.3-3.3.0.2'
 
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta64.5-1.20.2'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta64.5-1.20.2'
