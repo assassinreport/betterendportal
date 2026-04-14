@@ -23,9 +23,6 @@
 		],
 		"fabric-datagen": [
           "net.assassinreport.betterendportal.BetterEndPortalDataGenerator"
-		],
-		"terrablender": [
-			"net.assassinreport.betterendportal.world.biome.ModTerraBlenderAPI"
 		]
 	},
 	"mixins": [
