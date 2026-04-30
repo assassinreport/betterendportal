@@ -8,6 +8,6 @@ import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 public class BetterEndPortalClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockEntityRendererFactories.register(ModBlockEntities.NEW_END_PORTAL_BLOCK_ENTITY, NewEndPortalBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.NEW_END_PORTAL_BLOCK_ENTITY, ctx -> new NewEndPortalBlockEntityRenderer(ctx));
     }
 }
