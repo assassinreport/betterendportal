@@ -1,4 +1,5 @@
-// 1.20.5	2026-04-14T12:40:05.2711159	BetterEndPortal/Model Definitions
-d693011c1ec4f1594ab18ed54f3d4dd6adebd02b assets\betterendportal\models\block\void_matter.json
-0cbe28d831fdc61fd15bdf00962efc7af4065e5d assets\betterendportal\blockstates\void_matter.json
-7f180c7ebc8183b7b0f7f30e951b91746641411f assets\betterendportal\models\item\void_matter.json
+// 1.21.4	-999999999-01-01T00:00:00	BetterEndPortal/Model Definitions
+0cbe28d831fdc61fd15bdf00962efc7af4065e5d assets/betterendportal/blockstates/void_matter.json
+4db9160e4bf2a88f47e70870e7fbfc863f43ef9e assets/betterendportal/items/new_end_portal_block.json
+254faff4dbd4252d13dbbeaefc7a35ea23a8128f assets/betterendportal/items/void_matter.json
+d693011c1ec4f1594ab18ed54f3d4dd6adebd02b assets/betterendportal/models/block/void_matter.json

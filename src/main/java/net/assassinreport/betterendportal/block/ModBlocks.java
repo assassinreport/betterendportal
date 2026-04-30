@@ -8,15 +8,29 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
     public static final NewEndPortalBlock NEW_END_PORTAL_BLOCK = (NewEndPortalBlock) registerBlock("new_end_portal_block",
-            new NewEndPortalBlock());
+            new NewEndPortalBlock(blockSettings("new_end_portal_block")));
 
     public static final Block VOID_MATTER = registerBlock("void_matter",
-            new Block(Block.Settings.copy(Blocks.OBSIDIAN)));
+            new Block(blockSettings("void_matter", Blocks.OBSIDIAN)));
+
+    private static Block.Settings blockSettings(String name) {
+        return Block.Settings.create().registryKey(
+                RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(BetterEndPortal.MOD_ID, name))
+        );
+    }
+
+    private static Block.Settings blockSettings(String name, Block copyFrom) {
+        return Block.Settings.copy(copyFrom).registryKey(
+                RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(BetterEndPortal.MOD_ID, name))
+        );
+    }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -25,7 +39,9 @@ public class ModBlocks {
 
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, Identifier.of(BetterEndPortal.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+                new BlockItem(block, new Item.Settings().registryKey(
+                        RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BetterEndPortal.MOD_ID, name))
+                )));
     }
 
     public static void registerModBlocks() {
