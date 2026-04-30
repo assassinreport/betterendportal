@@ -29,7 +29,7 @@ public class BetterEndPortal implements ModInitializer {
 				.registerIgniteEvent((player, world, portalPos, framePos, ignitionSource) -> {
 					world.playSound(null, portalPos, SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.BLOCKS, 1.0F, 1.0F);
 				})
-				.destDimID(new Identifier("minecraft", "the_end"))
+				.destDimID(Identifier.of("minecraft", "the_end"))
 				.forcedSize(2,2)
 				.flatPortal()
 				.registerPortal();
