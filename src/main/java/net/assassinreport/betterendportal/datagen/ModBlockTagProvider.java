@@ -17,12 +17,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg){
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+    protected void configure(RegistryWrapper.WrapperLookup arg) {
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.VOID_MATTER);
 
-        getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("fabric", "needs_tool_level_4")))
+        valueLookupBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of("fabric", "needs_tool_level_4")))
                 .add(ModBlocks.VOID_MATTER);
-
     }
 }
